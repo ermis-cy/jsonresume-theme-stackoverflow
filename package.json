@@ -8,10 +8,37 @@
     "url": "https://github.com/francescoes/jsonresume-theme-stackoverflow"
   },
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
   "dependencies": {
-    "handlebars": "^4.7.7",
-    "markdown-it": "^13.0.1",
-    "moment": "^2.29.2"
-  }
+    "@griffel/react": "^1.5.25",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "postinstall": "node scripts/createSchema.cjs",
+    "start": "vite",
+    "build": "vite build --ssr src/index.tsx"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/register": "^7.24.6",
+    "@jsonresume/schema": "^1.2.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "json-schema-to-typescript": "^14.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  },
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }
